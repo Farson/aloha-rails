@@ -68,7 +68,7 @@
 	font-family: Arial;
 	font-weight: bold;
 	border: 1px solid #ccc;
-	background: #fff url(../img/textbox.png) no-repeat -1px -1px;
+	background: #fff url(/img/textbox.png) no-repeat -1px -1px;
 	border-radius:			2px;
 	-moz-border-radius:		2px;
 	-webkit-border-radius:	2px;
@@ -92,7 +92,7 @@
 	float: right;
 	padding: 5px 10px;
 	border: 1px solid #aaa;
-	
+
 	border-radius:			2px;
 	-moz-border-radius:		2px;
 	-webkit-border-radius:	2px;
@@ -119,18 +119,18 @@
 		endColorstr='#eeeeee',
 		gradientType='0'
 	);
-	
+
 	-moz-box-shadow:	0 0 3px rgba(0, 0, 0, .2);
 	-webkit-box-shadow:	0 0 3px rgba(0, 0, 0, .2);
 	box-shadow:			0 0 3px rgba(0, 0, 0, .2);
-	
+
 	color: #555;
-	
+
 	opacity: 0.8;
 	filter: alpha(opacity=80);
-	
+
 	cursor: pointer;
-	
+
 	text-shadow: 0 0 1px rgba(0, 0, 0, .4);
 }
 .aloha-comments-btn:hover {
@@ -211,7 +211,7 @@
 .aloha-comments-bar-toggle-img {
 	width: 40px;
 	height: 40px;
-	background: url(../img/comments.png) no-repeat center center;
+	background: url(/img/comments.png) no-repeat center center;
 	float: right;
 }
 .aloha-comments-bar-toggle {
@@ -240,16 +240,16 @@
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
-	
+
 	-moz-box-shadow:	0px 0px 5px rgba(0, 0, 0, .7);
 	-webkit-box-shadow:	0px 0px 5px rgba(0, 0, 0, .7);
 	box-shadow:			0px 0px 5px rgba(0, 0, 0, .7);
-	
+
 	border-top-right-radius:	 5px;
 	-moz-border-radius-topright: 5px;
 	-webkit-border-top-right-radius: 5px;
 	-webkit-border-bottom-right-radius: 5px;
-	
+
 	opacity: 0.75;
 	filter: alpha(opacity=75);
 }
@@ -297,7 +297,7 @@
 .aloha-comments-bar h2 {
 	margin: 0;
 	padding: 10px 0 10px 52px;
-	background: url(../img/comments.png) no-repeat 10px center;
+	background: url(/img/comments.png) no-repeat 10px center;
 	border-bottom: 1px solid #111;
 	border-color: rgba(0, 0, 0, .4);
 	color: #999;
@@ -391,7 +391,7 @@
 	display: block;
 	margin-bottom: 5px;
 	padding-bottom: 5px;
-	background: url(../img/hr.png) repeat-x left bottom;
+	background: url(/img/hr.png) repeat-x left bottom;
 	font-size: 11px;
 }
 .aloha-comments-bar-comment li {
@@ -405,7 +405,7 @@
 	height: 0;
 	margin-top: 5px;
 	padding-top: 15px;
-	background: url(../img/hr.png) repeat-x left top;
+	background: url(/img/hr.png) repeat-x left top;
 }
 .aloha-comments-bar-reply input,
 .aloha-comments-bar-reply textarea {
@@ -417,7 +417,7 @@
 	font-family: Arial;
 	font-weight: bold;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	background: #fff url(../img/textbox.png) no-repeat -1px -1px;
+	background: #fff url(/img/textbox.png) no-repeat -1px -1px;
 	border-radius:			2px;
 	-moz-border-radius:		2px;
 	-webkit-border-radius:	2px;
@@ -435,8 +435,8 @@ button.aloha-comments-toolbar-btn {
 	height: 40px;
 }
 button.aloha-comments-btn-add {
-	background: url(../img/add.png) no-repeat center center !important;
+	background: url(/img/add.png) no-repeat center center !important;
 }
 button.aloha-comments-btn-reveal {
-	background: url(../img/comments.png) no-repeat center center !important;
+	background: url(/img/comments.png) no-repeat center center !important;
 }
