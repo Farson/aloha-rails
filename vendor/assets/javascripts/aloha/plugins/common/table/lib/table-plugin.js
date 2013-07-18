@@ -460,7 +460,7 @@ define( [
 		for ( var i = 0; i < j; i++ ) {
 			if ( tabs[ i ].label == i18n.t( 'floatingmenu.tab.table' ) ) {
 				tabs[ i ].label += '&nbsp<img\
-					src="/assets/aloha/img/warning-icon.png"\
+					src="aloha/img/warning-icon.png"\
 					style="vertical-align:middle;"\
 					alt="" />';
 			}

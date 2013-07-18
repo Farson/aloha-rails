@@ -244,10 +244,10 @@ tr.ui-search-toolbar select {margin: 1px 0px 0px 0px}
 	filter: alpha(opacity=70);
 }
 .ui-jqgrid .ui-icon-asc {
-	background: url(/assets/aloha/img/sort-alphabet.png) no-repeat center center;
+	background: url(aloha/img/sort-alphabet.png) no-repeat center center;
 }
 .ui-jqgrid .ui-icon-desc {
-	background: url(/assets/aloha/img/sort-alphabet-descending.png) no-repeat center center;
+	background: url(aloha/img/sort-alphabet-descending.png) no-repeat center center;
 }
 .ui-jqgrid .ui-grid-ico-sort.ui-state-disabled {
 	display: none;
@@ -332,16 +332,16 @@ tr.ui-search-toolbar select {margin: 1px 0px 0px 0px}
 	height: 16px;
 }
 .ui-jqgrid .ui-pg-button .ui-icon-seek-next {
-	background-image: url(/assets/aloha/img/arrow.png);
+	background-image: url(aloha/img/arrow.png);
 }
 .ui-jqgrid .ui-pg-button .ui-icon-seek-end {
-	background-image: url(/assets/aloha/img/arrow-stop.png);
+	background-image: url(aloha/img/arrow-stop.png);
 }
 .ui-jqgrid .ui-pg-button .ui-icon-seek-prev {
-	background-image: url(/assets/aloha/img/arrow-180.png);
+	background-image: url(aloha/img/arrow-180.png);
 }
 .ui-jqgrid .ui-pg-button .ui-icon-seek-first {
-	background-image: url(/assets/aloha/img/arrow-stop-180.png);
+	background-image: url(aloha/img/arrow-stop-180.png);
 }
 .ui-jqgrid .ui-pg-input {
 	width: 20px;
@@ -395,7 +395,7 @@ tr.ui-search-toolbar select {margin: 1px 0px 0px 0px}
 	font-weight: normal;
 	color: #777;
 
-	background: url(/assets/aloha/img/throbber.gif) no-repeat left center;
+	background: url(aloha/img/throbber.gif) no-repeat left center;
 }
 .ui-jqgrid .jqgrid-overlay {display:none; z-index:100;}
 
@@ -551,13 +551,13 @@ tr.ui-search-toolbar select {margin: 1px 0px 0px 0px}
 	background: transparent no-repeat center center;
 }
 .aloha-browser-icon-page {
-	background: url(/assets/aloha/img/gcn-icons/gcn-icon-page.gif) no-repeat center center;
+	background: url(aloha/img/gcn-icons/gcn-icon-page.gif) no-repeat center center;
 }
 .aloha-browser-icon-file {
-	background: url(/assets/aloha/img/gcn-icons/gcn-icon-file.gif) no-repeat center center;
+	background: url(aloha/img/gcn-icons/gcn-icon-file.gif) no-repeat center center;
 }
 .aloha-browser-icon-image {
-	background: url(/assets/aloha/img/gcn-icons/gcn-icon-image.gif) no-repeat center center;
+	background: url(aloha/img/gcn-icons/gcn-icon-image.gif) no-repeat center center;
 }
 .aloha-browser-grab-handle {
 	cursor: default;
@@ -669,7 +669,7 @@ tr.ui-search-toolbar select {margin: 1px 0px 0px 0px}
 		width: 16px;
 		height: 22px;
 		display: inline-block;
-		background: url(/assets/aloha/img/magnifier-left.png) no-repeat center center;
+		background: url(aloha/img/magnifier-left.png) no-repeat center center;
 		vertical-align: middle;
 	}
 .aloha-browser-close-btn {

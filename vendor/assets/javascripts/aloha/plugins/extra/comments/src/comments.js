@@ -661,7 +661,7 @@
 			$.each([
 				'hr.png',
 				'textbox.png'
-			], function () {(new Image()).src = '../../plugin/comments/assets/aloha/img/' + this;});
+			], function () {(new Image()).src = '../../plugin/commentsaloha/img/' + this;});
 		}
 
 	}))(); // Aloha.Comments

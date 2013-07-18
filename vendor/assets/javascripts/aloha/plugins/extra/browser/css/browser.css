@@ -156,7 +156,7 @@
 	background: transparent no-repeat center center;
 }
 .aloha-browser-icon-document {
-	background: url(/assets/aloha/img/page.png) no-repeat center center;
+	background: url(aloha/img/page.png) no-repeat center center;
 }
 .aloha-browser-grab-handle {
 	cursor: default;
@@ -265,7 +265,7 @@
 		width: 16px;
 		height: 16px;
 		display: inline-block;
-		background: url(/assets/aloha/img/magnifier-left.png) no-repeat center center;
+		background: url(aloha/img/magnifier-left.png) no-repeat center center;
 		vertical-align: middle;
 	}
 
@@ -353,8 +353,8 @@
 	background-position: center center
 }
 .aloha-browser-icon-website {
-	background-image: url(/assets/aloha/img/page.png);
+	background-image: url(aloha/img/page.png);
 }
 .aloha-browser-icon-image {
-	background-image: url(/assets/aloha/img/picture.png);
+	background-image: url(aloha/img/picture.png);
 }

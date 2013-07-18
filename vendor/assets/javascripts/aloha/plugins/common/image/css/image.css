@@ -1,47 +1,47 @@
 
 /* Images */
 button.aloha-image-align-left {
-    background: url(/assets/aloha/img/image-align-left.png);
+    background: url(aloha/img/image-align-left.png);
 }
 
 button.aloha-image-align-right {
-    background: url(/assets/aloha/img/image-align-right.png);
+    background: url(aloha/img/image-align-right.png);
 }
 
 button.aloha-image-align-none {
-    background: url(/assets/aloha/img/image-align-none.png);
+    background: url(aloha/img/image-align-none.png);
 }
 
 button.aloha-img.aloha-image-title {
-    background: url(/assets/aloha/img/image-title.png);
+    background: url(aloha/img/image-title.png);
 }
 
 button.aloha-img.aloha-image-border {
-    background: url(/assets/aloha/img/image-border.png);
+    background: url(aloha/img/image-border.png);
 }
 
 button.aloha-image-insert {
-    background: url(/assets/aloha/img/image.gif) !important;
+    background: url(aloha/img/image.gif) !important;
 }
 
 button.aloha-img.aloha-image-padding-increase {
-	background: url(/assets/aloha/img/padding-increase.gif);
+	background: url(aloha/img/padding-increase.gif);
 }
 
 button.aloha-img.aloha-image-padding-decrease {
-	background: url(/assets/aloha/img/padding-decrease.gif);
+	background: url(aloha/img/padding-decrease.gif);
 }
 
 button.aloha-img.aloha-image-size-increase {
-	background: url(/assets/aloha/img/size-increase.gif);
+	background: url(aloha/img/size-increase.gif);
 }
 
 button.aloha-img.aloha-image-size-decrease {
-	background: url(/assets/aloha/img/size-decrease.gif);
+	background: url(aloha/img/size-decrease.gif);
 }
 
 .aloha-default-file-icon {
-	background: url(/assets/aloha/img/page.png);
+	background: url(aloha/img/page.png);
 
 	width: 16px;
 	height:16px;
@@ -51,7 +51,7 @@ button.aloha-img.aloha-image-size-decrease {
 
 /* Crop and Resize */
 button.cnr-resize.x-btn-text, button.cnr-crop.x-btn-text, button.cnr-reset.x-btn-text {
-	background: url(/assets/aloha/img/cropnresize.png);
+	background: url(aloha/img/cropnresize.png);
 }
 
 button.cnr-crop {
@@ -63,7 +63,7 @@ button.cnr-reset {
 }
 
 .cnr-ratio {
-	background-image: url(/assets/aloha/img/cropnresize.png) !important;
+	background-image: url(aloha/img/cropnresize.png) !important;
 	background-position: -60px -2px !important;
 }
 

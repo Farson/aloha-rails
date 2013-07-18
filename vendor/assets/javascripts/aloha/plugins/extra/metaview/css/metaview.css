@@ -4,7 +4,7 @@
 * aloha-sales@gentics.com
 * Licensed unter the terms of http://www.aloha-editor.com/license.html
 */
-button.aloha-button-metaview { background: url(/assets/aloha/img/button.png) no-repeat 0px 0px !important; }
+button.aloha-button-metaview { background: url(aloha/img/button.png) no-repeat 0px 0px !important; }
 
 .aloha-metaview p, .aloha-metaview pre,
 .aloha-metaview h1, .aloha-metaview h2,
@@ -46,41 +46,41 @@ button.aloha-button-metaview { background: url(/assets/aloha/img/button.png) no-
 /* HTML ELEMENTS*/
 .aloha-metaview ul, .aloha-metaview ol { border-left: 20px solid #ddd; padding: 0px 5px; }
 
-.aloha-metaview p { background-image: url(/assets/aloha/img/p.png); }
-.aloha-metaview pre { background-image: url(/assets/aloha/img/pre.png); }
-.aloha-metaview h1 { background-image: url(/assets/aloha/img/h1.png); }
-.aloha-metaview h2 { background-image: url(/assets/aloha/img/h2.png); }
-.aloha-metaview h3 { background-image: url(/assets/aloha/img/h3.png); }
-.aloha-metaview h4 { background-image: url(/assets/aloha/img/h4.png); }
-.aloha-metaview h5 { background-image: url(/assets/aloha/img/h5.png); }
-.aloha-metaview h6 { background-image: url(/assets/aloha/img/h6.png); }
-.aloha-metaview blockquote { background-image: url(/assets/aloha/img/blockquote.png); }
-.aloha-metaview div { background-image: url(/assets/aloha/img/div.png); }
-.aloha-metaview dl { background-image: url(/assets/aloha/img/dl.png); }
-.aloha-metaview dt { background-image: url(/assets/aloha/img/dt.png); }
-.aloha-metaview dd { background-image: url(/assets/aloha/img/dd.png); }
-.aloha-metaview td { background-image: url(/assets/aloha/img/td.png); }
-.aloha-metaview th { background-image: url(/assets/aloha/img/th.png); }
-.aloha-metaview table { background-image: url(/assets/aloha/img/table.png); }
-.aloha-metaview caption { background-image: url(/assets/aloha/img/caption.png); }
+.aloha-metaview p { background-image: url(aloha/img/p.png); }
+.aloha-metaview pre { background-image: url(aloha/img/pre.png); }
+.aloha-metaview h1 { background-image: url(aloha/img/h1.png); }
+.aloha-metaview h2 { background-image: url(aloha/img/h2.png); }
+.aloha-metaview h3 { background-image: url(aloha/img/h3.png); }
+.aloha-metaview h4 { background-image: url(aloha/img/h4.png); }
+.aloha-metaview h5 { background-image: url(aloha/img/h5.png); }
+.aloha-metaview h6 { background-image: url(aloha/img/h6.png); }
+.aloha-metaview blockquote { background-image: url(aloha/img/blockquote.png); }
+.aloha-metaview div { background-image: url(aloha/img/div.png); }
+.aloha-metaview dl { background-image: url(aloha/img/dl.png); }
+.aloha-metaview dt { background-image: url(aloha/img/dt.png); }
+.aloha-metaview dd { background-image: url(aloha/img/dd.png); }
+.aloha-metaview td { background-image: url(aloha/img/td.png); }
+.aloha-metaview th { background-image: url(aloha/img/th.png); }
+.aloha-metaview table { background-image: url(aloha/img/table.png); }
+.aloha-metaview caption { background-image: url(aloha/img/caption.png); }
 
 .aloha-metaview abbr[title], .aloha-metaview dfn[title] { border-bottom: 1px dotted; cursor: help; }
 .aloha-metaview [lang] { padding-left: 20px; border: 1px dotted #ddd; background-color: #ccc; background-repeat: no-repeat; background-position: left center;}
 
 /* LANGUAGE FLAGS */
-.aloha-metaview [lang="de"] { background-image:url(../../flag-icons/assets/aloha/img/flags/de.png); }
-.aloha-metaview [lang="en"] { background-image:url(../../flag-icons/assets/aloha/img/flags/en.png); }
-.aloha-metaview [lang="fr"] { background-image:url(../../flag-icons/assets/aloha/img/flags/fr.png); }
-.aloha-metaview [lang="es"] { background-image:url(../../flag-icons/assets/aloha/img/flags/es.png); }
-.aloha-metaview [lang="it"] { background-image:url(../../flag-icons/assets/aloha/img/flags/it.png); }
-.aloha-metaview [lang="nl"] { background-image:url(../../flag-icons/assets/aloha/img/flags/nl.png); }
-.aloha-metaview [lang="no"] { background-image:url(../../flag-icons/assets/aloha/img/flags/no.png); }
-.aloha-metaview [lang="pl"] { background-image:url(../../flag-icons/assets/aloha/img/flags/pl.png); }
-.aloha-metaview [lang="rs"] { background-image:url(../../flag-icons/assets/aloha/img/flags/rs.png); }
+.aloha-metaview [lang="de"] { background-image:url(../../flag-iconsaloha/img/flags/de.png); }
+.aloha-metaview [lang="en"] { background-image:url(../../flag-iconsaloha/img/flags/en.png); }
+.aloha-metaview [lang="fr"] { background-image:url(../../flag-iconsaloha/img/flags/fr.png); }
+.aloha-metaview [lang="es"] { background-image:url(../../flag-iconsaloha/img/flags/es.png); }
+.aloha-metaview [lang="it"] { background-image:url(../../flag-iconsaloha/img/flags/it.png); }
+.aloha-metaview [lang="nl"] { background-image:url(../../flag-iconsaloha/img/flags/nl.png); }
+.aloha-metaview [lang="no"] { background-image:url(../../flag-iconsaloha/img/flags/no.png); }
+.aloha-metaview [lang="pl"] { background-image:url(../../flag-iconsaloha/img/flags/pl.png); }
+.aloha-metaview [lang="rs"] { background-image:url(../../flag-iconsaloha/img/flags/rs.png); }
 
-.aloha-metaview q { background-image:url(/assets/aloha/img/icon_cite.png); padding-left: 20px; border: 1px dotted #ddd; background-color: #ccc; background-repeat: no-repeat; background-position: left center;}
+.aloha-metaview q { background-image:url(aloha/img/icon_cite.png); padding-left: 20px; border: 1px dotted #ddd; background-color: #ccc; background-repeat: no-repeat; background-position: left center;}
 
-.aloha-metaview a { background-image:url(/assets/aloha/img/anchor.png); padding-left: 20px; border: 1px dotted #ddd; background-color: #ccc; background-repeat: no-repeat; background-position: left center;}
+.aloha-metaview a { background-image:url(aloha/img/anchor.png); padding-left: 20px; border: 1px dotted #ddd; background-color: #ccc; background-repeat: no-repeat; background-position: left center;}
 
 /* EXCEPTION FOR TABLE PLUGIN ELEMENTS*/
 

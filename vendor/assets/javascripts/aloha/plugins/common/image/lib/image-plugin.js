@@ -1317,7 +1317,7 @@ function AlohaImagePlugin ( aQuery, Plugin, FloatingMenu, i18nCore, i18n ) {
 				// TODO I would suggest to call the srcChange method. So all image src
 				// changes are on one single point.
 				imagestyle = "max-width: " + config.maxWidth + "; max-height: " + config.maxHeight;
-				imagetag = '<img style="'+ imagestyle + '" src="' + imagePluginUrl + '/assets/aloha/img/blank.jpg" title="" />';
+				imagetag = '<img style="'+ imagestyle + '" src="' + imagePluginUrl + 'aloha/img/blank.jpg" title="" />';
 				newImg = jQuery(imagetag);
 				// add the click selection handler
 				//newImg.click( Aloha.Image.clickImage ); - Using delegate now
