@@ -10,7 +10,7 @@
 	-moz-box-shadow:	0px 0px 10px rgba(0, 0, 0, .5);
 	-webkit-box-shadow:	0px 0px 10px rgba(0, 0, 0, .5);
 	box-shadow:			0px 0px 10px rgba(0, 0, 0, .5);
-	
+
 }
 .aloha-sidebar-bar.aloha-sidebar-right {
 	left: auto;
@@ -82,7 +82,7 @@
     	#303539 50%,
     	#33363b 95%
 	);
-	
+
 	color: #ccc;
 	cursor: pointer;
 	font-size: 13px;
@@ -99,16 +99,16 @@
 	left: 8px;
 	width: 16px;
 	height: 16px;
-	background: url(../img/arrow.png) no-repeat center center;
+	background: url(aloha/img/arrow.png) no-repeat center center;
 	opacity: 0.3;
-	
+
 }
 .aloha-sidebar-panel-title:hover .aloha-sidebar-panel-title-arrow {
 	opacity: 0.9;
-	
+
 }
 .aloha-sidebar-panel-title .aloha-sidebar-panel-title-arrow.aloha-sidebar-panel-title-arrow-down {
-	background-image: url(../img/arrow-down.png);
+	background-image: url(aloha/img/arrow-down.png);
 }
 .aloha-sidebar-panel-title-text {
 	margin-left: 24px;
@@ -146,7 +146,7 @@
 	width: 40px;
 	height: 30px;
 	overflow: hidden;
-	
+
 	background-color: #303539;
 	background-image: -webkit-gradient(
     	linear,
@@ -168,14 +168,14 @@
     	#303539 50%,
     	#33363b 95%
 	);
-	
-	
+
+
 	cursor: pointer;
-	
+
 	-moz-box-shadow:	0px 0px 10px rgba(0, 0, 0, .5);
 	-webkit-box-shadow:	0px 0px 10px rgba(0, 0, 0, .5);
 	box-shadow:			0px 0px 10px rgba(0, 0, 0, .5);
-	
+
 	border-top-right-radius:	 		5px;
 	border-bottom-right-radius:	 		5px;
 	-moz-border-radius-topright: 		5px;
@@ -191,7 +191,7 @@
 	-moz-border-radius-bottomright: 	0px;
 	-webkit-border-top-right-radius: 	0px;
 	-webkit-border-bottom-right-radius: 0px;
-	
+
 	border-top-left-radius:	 			5px;
 	border-bottom-left-radius:	 		5px;
 	-moz-border-radius-topleft: 		5px;
@@ -204,18 +204,18 @@
 	position: absolute;
 	top: 5px;
 	right: 5px;
-	background: url(../img/arrow.png) no-repeat center center;
+	background: url(aloha/img/arrow.png) no-repeat center center;
 	width: 20px;
 	height: 20px;
 	opacity: 0.5;
-	
+
 }
 .aloha-sidebar-right .aloha-sidebar-handle-icon {
 	left: 5px;
 	right: auto;
 }
 .aloha-sidebar-handle-icon.aloha-sidebar-handle-icon-left {
-	background-image: url(../img/arrow-left.png);
+	background-image: url(aloha/img/arrow-left.png);
 }
 .aloha-sidebar-panel-parent-path {
 	background-color: #303539;
@@ -239,7 +239,7 @@
     	#303539 50%,
     	#33363b 95%
 	);
-	
+
 	color: #fff;
 	cursor: pointer;
 	font-size: 12px;
@@ -249,20 +249,20 @@
 }
 .aloha-sidebar-panel-parent-path:hover {
 	opacity: 0.9;
-	
+
 }
 .aloha-sidebar-panel-parent-path span {
 	display: inline-block;
 	padding: 0 10px 0 5px;
-	background: url(../img/breadcrumb-divider.png) no-repeat right center;
+	background: url(aloha/img/breadcrumb-divider.png) no-repeat right center;
 	opacity: 0.25;
-	
+
 	line-height: 1.6em;
 }
 .aloha-sidebar-panel-parent-path span:first-child {
 	font-weight: bold;
 	opacity: 0.8;
-	
+
 }
 .aloha-sidebar-panel-parent-path span:last-child {
 	background: none;

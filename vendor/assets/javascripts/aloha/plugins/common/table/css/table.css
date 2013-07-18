@@ -6,12 +6,12 @@
 .aloha-table td.aloha-table-selectrow {
 	width: 25px !important;
 }
-.aloha-editable div.aloha-table-wrapper, .aloha-table-wrapper div.aloha-table-cell-editable, 
+.aloha-editable div.aloha-table-wrapper, .aloha-table-wrapper div.aloha-table-cell-editable,
 .aloha-table-wrapper .aloha-table-leftuppercorner div, .aloha-table-wrapper tr.aloha-table-selectcolumn td,
-.aloha-table-wrapper td.aloha-table-selectrow , .aloha-table-wrapper div.aloha-editable-caption { 
-	margin:0; 
+.aloha-table-wrapper td.aloha-table-selectrow , .aloha-table-wrapper div.aloha-editable-caption {
+	margin:0;
 	padding:0;
-	border:none; 
+	border:none;
 	background:none;
 	outline: 0px solid transparent;
 }
@@ -59,20 +59,20 @@ td.aloha-table-selectrow {
 	cursor: text !important;
 }
 .aloha-table tr.aloha-table-selectcolumn td {
-	cursor: url(../img/down.cur),default;
+	cursor: url(aloha/img/down.cur),default;
 }
 /* :tODO: make custom cursors visible in IE */
 .aloha-table td.aloha-table-selectrow {
-	cursor: url(../img/left.cur),default;
+	cursor: url(aloha/img/left.cur),default;
 }
 
 /* wai indicator */
 .aloha-table-wrapper div.aloha-wai-red {
-	background-image: url(../img/wai-red.png);
+	background-image: url(aloha/img/wai-red.png);
 }
 
 .aloha-table-wrapper div.aloha-wai-green {
-	background-image: url(../img/wai-green.png);
+	background-image: url(aloha/img/wai-green.png);
 }
 
 .aloha-table td.aloha-table-leftuppercorner div {
