@@ -8,14 +8,14 @@
 // TODO: SHIFT + ENTER => submit comment  |
 
 (function (window, undefined) {
-	
-	
-	
+
+
+
 	var  jQuery	= window.alohaQuery || window.jQuery,
 			  $ = jQuery,
 		GENTICS = window.GENTICS,
 		  Aloha	= window.Aloha;
-	
+
 	$.extend($.easing, {
 		easeOutExpo: function (x, t, b, c, d) {
 			return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
@@ -28,7 +28,7 @@
 			return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
 		}
 	});
-	
+
 	var dom_util = GENTICS.Utils.Dom,
 		clss = 'aloha-comments',
 		uid = +(new Date),
@@ -66,9 +66,9 @@
 		),
 		current_comment,
 		comments_hash = {};
-	
+
 	Aloha.Comments = new (Aloha.Plugin.extend({
-		
+
 		user	 : null,
 		comments : {},
 		colors	 : {
@@ -81,15 +81,15 @@
 		isRevealing	: false,
 		bar			: null,
 		isBarOpen	: false,
-		
+
 		_constructor: function () {
 			this._super('comments');
 		},
-		
+
 		init: function () {
 			var that = this,
 				ul = add_box.find('.' + clss + '-colors');
-			
+
 			$('body').append(add_box)
 				.mousedown(function () {
 					that.bodyClicked.apply(that, arguments);
@@ -97,27 +97,27 @@
 				.mouseup(function () {
 					//console.log(Aloha.Selection);
 				});
-			
+
 			$.each(this.colors, function (k, v) {
 				ul.append(
 					$('<li title="' + k + '" style="background-color:' + v + '"></li>')
 						.click(function () {that.setColor(k);})
 				);
 			});
-			
+
 			add_box.find('.' + clss + '-submit').click(function () {
 				that.submit();
 			});
-			
+
 			add_box.find('.' + clss + '-cancel').click(function () {
 				that.cancelAdd();
 			});
-			
+
 			this.preloadImages();
 			this.initBtns();
 			this.createBar();
 		},
-		
+
 		initBtns: function () {
 			var that = this,
 				add_btn = new Aloha.ui.Button({
@@ -138,24 +138,24 @@
 					},
 					tooltip: 'Show all comments on document'
 				});
-			
+
 			Aloha.FloatingMenu.addButton(
 				'Aloha.continuoustext',
 				add_btn, 'Comments', 1
 			);
-			
+
 			Aloha.FloatingMenu.addButton(
 				'Aloha.continuoustext',
 				reveal_btn, 'Comments', 1
 			);
 		},
-		
+
 		cancelAdd: function () {
 			//console.log(current_comment);
 			this.closeModal();
 			this.removeHighlight();
 		},
-		
+
 		createBar: function () {
 			var that = this,
 				bar	 = this.bar = $(
@@ -176,13 +176,13 @@
 				).click(function () {
 				 	that.barClicked.apply(that, arguments);
 				 });
-			
+
 			$('body').append(bar);
-			
+
 			$(window).resize(function () {
 				that.setBarScrolling();
 			});
-			
+
 			this.bar.find('.' + clss + '-bar-toggle')
 				.click(function () {
 					if (that.isBarOpen) {
@@ -192,26 +192,26 @@
 						$(this).addClass(clss + '-bar-toggle-opened');
 						that.showBar();
 					}
-					
-					
+
+
 				});
-			
+
 			this.setBarScrolling();
 		},
-		
+
 		barClicked: function (event) {
 			var src = $(event.target),
 				li = src;
-			
+
 			if (!src[0].tagName != 'LI') {
 				li = li.parents('li');
 			}
-			
+
 			if (li.length > 0) {
 				this.insertReplyTools(li.first());
 			}
 		},
-		
+
 		getGravatar: function (email, size) {
 			// MD5 (Message-Digest Algorithm) by WebToolkit
 			// http://www.webtoolkit.info/javascript-md5.html
@@ -219,16 +219,16 @@
 			var size = size || 80;
 			return 'http://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size;
 		},
-		
+
 		addComment: function () {
 			var that = this,
 				range = Aloha.Selection.getRangeObject(),
 				id = clss + '-' + (++uid),
 				classes = [clss + '-wrapper', id],
 				wrapper = $('<div class="' + classes.join(' ') + '">');
-			
+
 			dom_util.addMarkup(range, wrapper);
-			
+
 			// if the wrapper element does not exist, it means that there
 			// was nothing in the selection to wrap around, indicating an
 			// empty selection
@@ -236,9 +236,9 @@
 				// TODO: notify user
 				return;
 			}
-			
+
 			dom_util.doCleanup({'merge' : true, 'removeempty' : true}, range);
-			
+
 			var comment = current_comment = this.comments[id] = {
 				id		  : id,
 				timestamp : null,
@@ -250,14 +250,14 @@
 				elements  : $('.' + id),
 				commonAncestor: $(range.getCommonAncestorContainer())
 			};
-			
+
 			comments_hash[id] = this.comments[id];
-			
+
 			this.highlight(comment);
 			this.openModal(comment);
-			
+
 			$('.aloha-floatingmenu').hide();
-			
+
 			comment.elements.click(function () {
 				that.commentClicked(comment);
 			}).hover(
@@ -265,7 +265,7 @@
 				function () {that.hover(comment, false);}
 			);
 		},
-		
+
 		// Toogle marking of commented text on and off
 		revealComments: function () {
 			if (this.isRevealing) {
@@ -279,20 +279,20 @@
 						.css('background-color', comment.color);
 				});
 			}
-			
+
 			this.isRevealing = !this.isRevealing;
 		},
-		
+
 		openModal: function (comment) {
 			var that = this,
 				el	 = comment.elements.first(),
 				pos	 = el.offset();
-			
+
 			add_box
 				.show()
 				.css('height', 'auto')
 				.find('input').val(this.user);
-			
+
 			var scroll_to,
 				content	 = add_box.find('.' + clss + '-content'),
 				input	 = add_box.find('input.' + clss + '-user').removeClass(clss + '-error'),
@@ -300,7 +300,7 @@
 				h	= content.height(),
 				ah	= 30,
 				top = pos.top - (add_box.outerHeight(true) + ah);
-			
+
 			if (top <= 0) {
 				scroll_to = pos.top - ah;
 				el	= comment.elements.last();
@@ -311,7 +311,7 @@
 				add_box.removeClass(clss + '-point-from-bottom');
 				scroll_to = top - ah;
 			}
-			
+
 			add_box.css({
 				left : pos.left + (el.width() / 2) - (add_box.outerWidth(true) / 2),
 				top  : top,
@@ -321,25 +321,25 @@
 				marginTop : 0,
 				opacity	  : 1
 			}, 800, 'easeOutElastic');
-			
+
 			$('body').animate({
 				scrollTop: scroll_to
 			}, 1000, 'easeOutExpo');
-			
+
 			if (this.user == '' || !this.user) {
 				input.select();
 			} else {
 				input.val(this.user);
 				textarea.focus();
 			}
-			
+
 			content
 				.css('height', 0)
 				.animate({height: h}, 800, 'easeOutElastic');
-			
+
 			this.isModalOpen = true;
 		},
-		
+
 		closeModal: function () {
 			/*
 			var content = add_box.find('.' + clss + '-content'),
@@ -347,17 +347,17 @@
 			content.animate({height: 0}, 250, 'linear', function () {
 				$(this).parent().hide();
 			});
-			
+
 			add_box.animate({
 				'margin-top': h
 			}, 250, 'linear');
 			 */
-			
+
 			$('.aloha-floatingmenu').show();
 			add_box.fadeOut(250);
 			this.isModalOpen = false;
 		},
-		
+
 		highlight: function (comment) {
 			comment.elements
 				.css('background-color', comment.color)
@@ -371,54 +371,54 @@
 					'.' + clss + '-bar,'	  +
 					'.aloha-floatingmenu'	  +
 				')').addClass(clss + '-grayed');
-			
+
 			this.highlightElement(comment.commonAncestor);
-			
+
 			$('.' + clss + '-grayed').animate({opacity: 0.25}, 250);
-			
+
 			$('.' + clss + '-cleanme').each(function () {
 				if (dom_util.isEmpty(this)) {
 					$(this).remove();
 				}
 			});
 		},
-		
+
 		highlightElement: function (element) {
 			var that = this;
-			
+
 			element.contents().each(function () {
 				var el = (this.nodeType == 3)
 					? $(this).wrap('<span class="' + clss + '-cleanme">').parent()
 					: $(this);
-				
+
 				if (el.hasClass(clss + '-ancestor')) {
 					that.highlightElement(el);
 				} else if (!el.hasClass(clss + '-active')) {
 					el.addClass(clss + '-grayed');
 				}
 			});
-			
+
 			return element;
 		},
-		
+
 		removeHighlight: function () {
 			$('.' + clss + '-grayed')
 				.removeClass(clss + '-grayed')
 				.css('opacity', '');
-			
+
 			$('.' + clss + '-active')
 				.removeClass(clss + '-active')
 				.css('background-color', '');
-			
+
 			$('.' + clss + '-ancestor')
 				.removeClass(clss + '-ancestor')
-			
+
 			if (typeof current_comment == 'object') {
 				current_comment.elements.css('background-color', '');
 				current_comment = undefined;
 			}
 		},
-		
+
 		hover: function (comment, onenter) {
 			var el = comment.elements;
 			if (!el.hasClass(clss + '-active')) {
@@ -431,23 +431,23 @@
 				}
 			}
 		},
-		
+
 		commentClicked: function (comment) {
 			this.showBar(comment);
 		},
-		
+
 		showBar: function (comment) {
 			var that = this,
 				ul = this.bar.find('ul:first').html('');
-			
+
 			this.bar.animate({
 				'width': 300
 			}, 250, 'easeOutExpo');
-			
+
 			$('body').animate({
 				marginLeft: 300
 			}, 250, 'easeOutExpo');
-			
+
 			if (comment) {
 				this.highlight(comment);
 				this.printThread(ul, comment);
@@ -456,39 +456,39 @@
 					that.printThread(ul, this);
 				});
 			}
-			
+
 			this.isBarOpen = true;
 			this.setBarScrolling();
 		},
-		
+
 		setBarScrolling: function () {
 			var bottom = this.bar.find('.' + clss + '-bar-bottom').position();
-			
+
 			this.bar
 				.find('.' + clss + '-bar-inner')
 				.css({
 					height: $(window).height(),
 					'overflow-y': (bottom.top > this.bar.height()) ? 'scroll' : 'auto'
 				});
-			
+
 			this.bar
 				.find('.' + clss + '-bar-shadow')
 				.css('height', this.bar.height());
 		},
-		
+
 		closeBar: function () {
 			this.bar.animate({
 				'width': 0
 			}, 250, 'easeOutExpo');
-			
+
 			$('body').animate({
 				marginLeft: 0
 			}, 250, 'easeOutExpo');
-			
+
 			this.removeHighlight();
 			this.isBarOpen = false;
 		},
-		
+
 		printThread: function (el, comment) {
 			var that = this,
 				li = $(
@@ -503,22 +503,22 @@
 						'</div>' +
 					'</li>'
 				);
-			
+
 			el.append(li);
-			
+
 			$.each(comment.kids, function () {
 				var ul = $('<ul>');
 				li.append(ul);
 				that.printThread(ul, this);
 			});
 		},
-		
+
 		// Create reply textarea
 		insertReplyTools: function (li) {
 			var that = this,
 				reply = li.addClass(clss + '-bar-comment-active')
 						  .find('.aloha-comments-bar-comment>.' + clss + '-bar-reply');
-			
+
 			if (reply.length == 0) {
 				reply = $(
 					'<div class="' + clss + '-bar-reply">'	  +
@@ -531,26 +531,26 @@
 				li.find('button').click(function () {
 					that.submitReply.call(that, reply);
 				});
-				
+
 				var h = reply.css('height', 'auto').height();
 				reply.css('height', 0)
 					.animate({height: h}, 250, 'easeOutExpo');
-				
+
 				reply.find('input, textarea')
 					.css('width', reply.width() - 12);
-				
+
 				reply.find('input').select();
-				
+
 				this.bar.scrollTop(reply.offset().top);
 			}
 		},
-		
+
 		submitReply: function (reply_tool) {
 			var that = this,
 				li	 = reply_tool.parents('li').first(),
 				mom_id = li.attr('data-aloha-comment'),
 				mom	 = comments_hash[mom_id];
-			
+
 			if (typeof mom == 'object') {
 				var id	  = clss + '-' + (++uid),
 					email = reply_tool.find('input').val().trim(),
@@ -569,9 +569,9 @@
 						commonAncestor
 								  : mom.elements  // inherit
 					});
-				
+
 				comments_hash[id] = mom.kids[index - 1];
-				
+
 				reply_tool.animate(
 					{height: 0}, 250, 'easeOutExpo',
 					function () {
@@ -581,17 +581,17 @@
 						that.printThread(ul, comments_hash[id]);
 					}
 				);
-				
+
 				this.user = email;
 			}
 		},
-		
+
 		setColor: function (index) {
 			current_comment.color = this.colors[index];
 			current_comment.elements.css('background-color', current_comment.color);
 			add_box.find('textarea').focus();
 		},
-		
+
 		submit: function () {
 			var textarea = add_box.find('textarea'),
 				input	 = add_box.find('.' + clss + '-user'),
@@ -599,23 +599,23 @@
 				comment	 = textarea.val().trim(),
 				errors	 = false,
 				err_clss = clss + '-error';
-			
+
 			if (email == '') {
 				input.focus().addClass(err_clss);
 				errors = true;
 			} else {
 				input.removeClass(err_clss);
 			}
-			
+
 			if (comment == '') {
 				textarea.focus().addClass(err_clss);
 				errors = true;
 			} else {
 				textarea.removeClass(err_clss);
 			}
-			
+
 			comment = comment.replace(/[\r\n]/g, '<br />');
-			
+
 			if (!errors) {
 				$.extend(current_comment, {
 					email	  : email,
@@ -628,25 +628,25 @@
 				textarea.val('');
 				input.val('');
 			}
-			
+
 			this.user = email;
 		},
-		
+
 		insertComment: function (comment) {
 			comments_hash[comment.id] =
 				this.comments[comment.id] = comment;
 		},
-		
+
 		bodyClicked: function (event) {
 			var el = $(event.target);
-			
+
 			if (this.isModalOpen && !el.hasClass(clss + '-addbox')) {
 				if (el.parents('.' + clss + '-addbox').length == 0) {
 					this.closeModal();
 					this.removeHighlight();
 				}
 			}
-			
+
 			if (!this.isModalOpen) {
 				if (!el.hasClass(clss + '-bar')) {
 					if (el.parents('.' + clss + '-bar').length == 0) {
@@ -655,15 +655,15 @@
 				}
 			}
 		},
-		
+
 		// What's the best way to determin the img path
 		preloadImages: function () {
 			$.each([
 				'hr.png',
 				'textbox.png'
-			], function () {(new Image()).src = '../../plugin/comments/img/' + this;});
+			], function () {(new Image()).src = '../../plugin/comments/assets/aloha/img/' + this;});
 		}
-		
+
 	}))(); // Aloha.Comments
-	
+
 })(window);

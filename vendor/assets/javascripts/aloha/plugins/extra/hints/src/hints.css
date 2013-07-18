@@ -30,7 +30,7 @@
 	left:50%;
 	width:9px;
 	height:5px;
-	background:url(/img/tip-twitter_arrows.gif) no-repeat;
+	background:url(/assets/aloha/img/tip-twitter_arrows.gif) no-repeat;
 }
 .tip-twitter .tip-arrow-right {
 	margin-top:-4px; /* approx. half the height to center it */
@@ -39,7 +39,7 @@
 	left:100%;
 	width:5px;
 	height:9px;
-	background:url(/img/tip-twitter_arrows.gif) no-repeat -9px 0;
+	background:url(/assets/aloha/img/tip-twitter_arrows.gif) no-repeat -9px 0;
 }
 .tip-twitter .tip-arrow-bottom {
 	margin-top:0;
@@ -48,7 +48,7 @@
 	left:50%;
 	width:9px;
 	height:5px;
-	background:url(/img/tip-twitter_arrows.gif) no-repeat -18px 0;
+	background:url(/assets/aloha/img/tip-twitter_arrows.gif) no-repeat -18px 0;
 }
 .tip-twitter .tip-arrow-left {
 	margin-top:-4px; /* approx. half the height to center it */
@@ -57,5 +57,5 @@
 	left:0;
 	width:5px;
 	height:9px;
-	background:url(/img/tip-twitter_arrows.gif) no-repeat -27px 0;
+	background:url(/assets/aloha/img/tip-twitter_arrows.gif) no-repeat -27px 0;
 }

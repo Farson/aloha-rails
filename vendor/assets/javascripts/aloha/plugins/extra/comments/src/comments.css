@@ -68,7 +68,7 @@
 	font-family: Arial;
 	font-weight: bold;
 	border: 1px solid #ccc;
-	background: #fff url(/img/textbox.png) no-repeat -1px -1px;
+	background: #fff url(/assets/aloha/img/textbox.png) no-repeat -1px -1px;
 	border-radius:			2px;
 	-moz-border-radius:		2px;
 	-webkit-border-radius:	2px;
@@ -211,7 +211,7 @@
 .aloha-comments-bar-toggle-img {
 	width: 40px;
 	height: 40px;
-	background: url(/img/comments.png) no-repeat center center;
+	background: url(/assets/aloha/img/comments.png) no-repeat center center;
 	float: right;
 }
 .aloha-comments-bar-toggle {
@@ -297,7 +297,7 @@
 .aloha-comments-bar h2 {
 	margin: 0;
 	padding: 10px 0 10px 52px;
-	background: url(/img/comments.png) no-repeat 10px center;
+	background: url(/assets/aloha/img/comments.png) no-repeat 10px center;
 	border-bottom: 1px solid #111;
 	border-color: rgba(0, 0, 0, .4);
 	color: #999;
@@ -391,7 +391,7 @@
 	display: block;
 	margin-bottom: 5px;
 	padding-bottom: 5px;
-	background: url(/img/hr.png) repeat-x left bottom;
+	background: url(/assets/aloha/img/hr.png) repeat-x left bottom;
 	font-size: 11px;
 }
 .aloha-comments-bar-comment li {
@@ -405,7 +405,7 @@
 	height: 0;
 	margin-top: 5px;
 	padding-top: 15px;
-	background: url(/img/hr.png) repeat-x left top;
+	background: url(/assets/aloha/img/hr.png) repeat-x left top;
 }
 .aloha-comments-bar-reply input,
 .aloha-comments-bar-reply textarea {
@@ -417,7 +417,7 @@
 	font-family: Arial;
 	font-weight: bold;
 	border: 1px solid rgba(0, 0, 0, 0.2);
-	background: #fff url(/img/textbox.png) no-repeat -1px -1px;
+	background: #fff url(/assets/aloha/img/textbox.png) no-repeat -1px -1px;
 	border-radius:			2px;
 	-moz-border-radius:		2px;
 	-webkit-border-radius:	2px;
@@ -435,8 +435,8 @@ button.aloha-comments-toolbar-btn {
 	height: 40px;
 }
 button.aloha-comments-btn-add {
-	background: url(/img/add.png) no-repeat center center !important;
+	background: url(/assets/aloha/img/add.png) no-repeat center center !important;
 }
 button.aloha-comments-btn-reveal {
-	background: url(/img/comments.png) no-repeat center center !important;
+	background: url(/assets/aloha/img/comments.png) no-repeat center center !important;
 }

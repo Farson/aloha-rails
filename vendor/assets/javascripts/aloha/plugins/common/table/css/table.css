@@ -59,20 +59,20 @@ td.aloha-table-selectrow {
 	cursor: text !important;
 }
 .aloha-table tr.aloha-table-selectcolumn td {
-	cursor: url(/img/down.cur),default;
+	cursor: url(/assets/aloha/img/down.cur),default;
 }
 /* :tODO: make custom cursors visible in IE */
 .aloha-table td.aloha-table-selectrow {
-	cursor: url(/img/left.cur),default;
+	cursor: url(/assets/aloha/img/left.cur),default;
 }
 
 /* wai indicator */
 .aloha-table-wrapper div.aloha-wai-red {
-	background-image: url(/img/wai-red.png);
+	background-image: url(/assets/aloha/img/wai-red.png);
 }
 
 .aloha-table-wrapper div.aloha-wai-green {
-	background-image: url(/img/wai-green.png);
+	background-image: url(/assets/aloha/img/wai-green.png);
 }
 
 .aloha-table td.aloha-table-leftuppercorner div {
